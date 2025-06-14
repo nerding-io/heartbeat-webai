@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI Mirror</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="loading-modal">
+      <div class="loading-content">
+        <h3>Loading AI Model</h3>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p class="loading-status">Initializing...</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="video-container">
+        <video id="webcam" autoplay playsinline></video>
+
+        <div class="heart-metrics">
+          <span class="material-icons heart">favorite</span>
+          <span class="bpm">--</span>
+          <span>BPM</span>
+        </div>
+
+        <div class="controls">
+          <button class="connect-btn">Connect Heart Rate Monitor</button>
+          <button class="start-btn hide">Start Monitoring</button>
+          <button class="stop-btn hide">Stop</button>
+        </div>
+      </div>
+
+      <div class="analysis">
+        <div id="transcript"></div>
+        <div id="feedback"></div>
+      </div>
+
+      <div class="error hide">Bluetooth not supported on this browser</div>
+    </div>
+
+    <audio src="heartbeat.mp3" loop></audio>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
